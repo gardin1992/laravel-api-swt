@@ -11,13 +11,23 @@
 |
 */
 
-use Illuminate\Support\Facades\Auth;
-
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
-Route::get('/home', 'HomeController@index');
+Route::group([
+    'prefix' => 'admin'
+], function() {
 
+    Route::get('/login', function () { return view('admin/login'); });
+    Route::get('/register', function () { return view('admin/register'); });
+    Route::get('/', function () { return view('admin/dashboard'); });
+});
 
-Auth::routes();
+Route::group([
+    'prefix' => 'admin-geral'
+], function() {
+
+    Route::get('/login', function () { return view('admin/login'); });
+    Route::get('/', function () { return view('admin/dashboard'); });
+});
