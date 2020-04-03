@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', function () { return view('index');});
 
 Route::group([
     'prefix' => 'admin'
@@ -30,4 +28,8 @@ Route::group([
 
     Route::get('/login', function () { return view('admin/login'); });
     Route::get('/', function () { return view('admin/dashboard'); });
+});
+
+Route::group(['domain' => '{account}.' . env('APP_DOMAIN')], function () {
+    Route::get('/foo', function () { return view('index');});
 });
