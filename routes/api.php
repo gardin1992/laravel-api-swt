@@ -28,3 +28,6 @@ Route::group([
 
     Route::get('users', 'Api\UserController@index');
 });
+
+Route::post('/register', 'Api\UserController@register');
+Route::post('/login', 'Api\AuthController@login');

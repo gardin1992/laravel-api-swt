@@ -33,3 +33,4 @@ Route::group([
 Route::group(['domain' => '{account}.' . env('APP_DOMAIN')], function () {
     Route::get('/foo', function () { return view('index');});
 });
+

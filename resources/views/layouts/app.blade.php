@@ -8,10 +8,10 @@
     <title>App Name - @yield('title')</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="/public/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="/public/css/business-frontpage.css" rel="stylesheet">
+    <link href="/css/business-frontpage.css" rel="stylesheet">
 
 </head>
 <body>
@@ -72,7 +72,7 @@
 </footer>
 
 <!-- Bootstrap core JavaScript -->
-<script src="/public/vendor/jquery/jquery.min.js"></script>
-<script src="/public/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/vendor/jquery/jquery.min.js"></script>
+<script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
